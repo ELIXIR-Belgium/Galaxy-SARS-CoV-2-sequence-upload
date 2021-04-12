@@ -1,0 +1,191 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style/base.css" type="text/css">
+    <style type="text/css">
+        body {
+            font-size: 16px;
+        }
+
+        .padding-m {
+            padding: 20px 0px 20px 0px;
+
+        }
+
+        .mainbody {
+            padding: 0px 0px 35px 0px;
+        }
+
+        .jumbo {
+            margin: 27px 20px 0px 20px;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+        }
+
+        figcaption {
+            padding-bottom: 12px;
+            padding-top: 6px;
+            max-width: 90%;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: gray;
+        }
+
+        .docimage {
+            margin: 20px 0px 20px 0px;
+        }
+
+        .alert {
+            margin: 20px 0px;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-top: 25px;
+        }
+
+        h2 {
+            font-size: 170%;
+            line-height: 30px;
+            font-weight: 700;
+            color: #de4d00;
+            margin: 40px 0 10px;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 120%;
+            margin-top: 20px;
+        }
+
+        figure img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body style="margin: 0;">
+
+    <div class="jumbotron jumbo">
+        <div class="container">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h1>Hello, your <strong>ENA-upload Galaxy</strong> container is running!</h1><br>
+                            <p> This container is optimized to clean human reads from raw reads and to upload them to
+                                ENA,
+                                this in only a few steps. The ENA uploading is based on the tool ena-upload-cli while
+                                the
+                                reads cleaning tool is based on Metagen-FastQC workflow.
+                            </p>
+                        </td>
+                        <td>
+                            <div>
+                                <img src="./images/welcome_elixir_logo.png" style="margin:10px; height:100px;">
+                            </div>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container mainbody">
+        <h1 id="ena-submission-quick-start">ENA submission quick-start</h1>
+        <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For more detailed
+            information on the container and the ENA submission process read the documentation found on ELIXIR Belgium’s
+            <a href="https://rdm.elixir-belgium.org/covid-19/sarscov2_submission.html">Data management hub</a></div>
+
+        <h2 id="1-log-in-to-galaxy-and-load-your-ena-credentials">1. Log in to Galaxy and load your ENA credentials:
+        </h2>
+
+        <ol>
+            <li>Login to Galaxy using <code class="language-plaintext highlighter-rouge">admin</code> as username and
+                <code class="language-plaintext highlighter-rouge">password</code> as password. This will give you full
+                access to the galaxy instance.</li>
+            <li>Go to <strong>User</strong> &gt; <strong>Preferences</strong> in the top navigation</li>
+            <li>Click on <i class="fa fa-user" aria-hidden="true"></i> <strong>Manage Information</strong></li>
+            <li>Fill in the <code class="language-plaintext highlighter-rouge">Your ENA Webin account details</code> (If
+                you do not have one, get your ENA Webin account <a
+                    href="https://www.ebi.ac.uk/ena/submit/sra/#registration">here</a>)</li>
+            <li>Click <strong>Save</strong></li>
+        </ol>
+
+        <h2 id="2-upload-data">2. Upload Data</h2>
+        <p>Upload your raw data using Galaxy’s <i class="fa fa-upload"></i> upload tool found at the top right of the
+            <strong>Tools</strong> panel or using <strong>Upload File from your computer</strong> under <strong>Upload
+                Data</strong> tool group.</p>
+
+        <h2 id="3-filter-human-reads-out-of-the-raw-reads">3. Filter human reads out of the raw reads</h2>
+        <p>Filter human traces from your raw data using <strong>Clean human reads from raw data</strong> from the
+            <strong>Preprocessing Tools</strong> on the left panel.</p>
+
+        <ol>
+            <li>Select human h38 reference genome</li>
+            <li>Choose single or paired-end</li>
+            <li>Select the files to clean</li>
+            <li>Click on ‘Execute’</li>
+        </ol>
+
+        <h2 id="4-upload-metadata-and-submit-to-ena">4. Upload metadata and submit to ENA</h2>
+        <p>The <strong>ENA Upload tool</strong> under <strong>Submission tools</strong> is used to generate the metadata
+            in the right format, associate it with the sequence data files and submit everything to ENA. It is advisable
+            to first test your submissions using the Webin test service where changes are not permanent and are erased
+            every 24 hours.</p>
+
+        <p>The tool offers three ways of entering metadata for submission:</p>
+        <ul>
+            <li>Complete the <a
+                    href="https://drive.google.com/file/d/1dulhBEfRO56ldCnuaIhjjtNbJDxQ5K1v/view?usp=sharing">metadata
+                    spreadsheet template</a> and upload it as in step 2 or;</li>
+            <li>Interactively generate the metadata structure or;</li>
+            <li>Complete the 4 <a href="https://github.com/usegalaxy-eu/ena-upload-cli/tree/master/example_tables">tsv
+                    templates</a> and upload as in step 2.</li>
+        </ul>
+
+        <p>After uploading or completing the metadata, select the corresponding (human traces removed) data files, fill
+            in your affiliation and click on ‘Execute’.</p>
+
+        <h2 id="5-check-for-a-valid-submission">5. Check for a valid submission</h2>
+
+        <p>Visit <a href="https://www.ebi.ac.uk/ena/submit/webin">Webin online</a> to check on your submissions or <a
+                href="https://wwwdev.ebi.ac.uk/ena/submit/webin">dev Webin</a> to check on test submissions. If
+            everything looks fine, publish the data by changing the “Release Date” of the study to a day later than the
+            current day. It can take several days for ENA to index the data and to let it appear in a correct manner.
+            Covid-19 data will also be indexed by the <a href="https://www.covid19dataportal.org/">COVID-19 Data
+                Portal</a></p>
+    </div>
+
+    <div class="footer">
+        <div class="container padding-m">
+            <p>
+                <a target="_blank" class="reference" href="http://galaxyproject.org/">
+                    Galaxy</a> is an open platform for supporting data intensive
+                research. Galaxy is developed by <a target="_blank" class="reference"
+                    href="http://wiki.galaxyproject.org/GalaxyTeam">The Galaxy Team</a>
+                with the support of <a target="_blank" class="reference"
+                    href="https://github.com/galaxyproject/galaxy/blob/dev/CONTRIBUTORS.md">many contributors</a>.
+                The Galaxy Docker project is supported by the University of Freiburg, part of de.NBI.
+            </p>
+
+            <p class="small">
+                The <a target="_blank" class="reference" href="http://galaxyproject.org/">Galaxy Project</a>
+                is supported in part by <a target="_blank" class="reference" href="http://www.genome.gov">NHGRI</a>,
+                <a target="_blank" class="reference" href="http://www.nsf.gov">NSF</a>,
+                <a target="_blank" class="reference" href="http://www.huck.psu.edu">The Huck Institutes of the Life
+                    Sciences</a>,
+                <a target="_blank" class="reference" href="http://www.ics.psu.edu">The Institute for CyberScience at
+                    Penn
+                    State</a>,
+                and <a target="_blank" class="reference" href="http://www.jhu.edu/">Johns Hopkins University</a>.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+preferences:
+    ena_webin_account:
+        description: Your ENA Webin account details
+        inputs:
+            - name: webin_id
+              label: ENA Webin ID
+              type: text
+              required: False
+            - name: password
+              label: Password
+              type:  password
+              required: False

@@ -1,0 +1,18 @@
+install_repository_dependencies: true
+install_resolver_dependencies: true
+install_tool_dependencies: true
+tools:
+
+- name: ena_upload
+  owner: iuc
+  revisions:
+  - 382518f24d6d
+  tool_panel_section_label: Submission tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+
+- name: reads_cleaning
+  owner: ieguinoa
+  revisions:
+  - efb0924293c3
+  tool_panel_section_label: Preprocessing tools
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
