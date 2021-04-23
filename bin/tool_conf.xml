@@ -4,5 +4,10 @@
         <tool file="data_source/upload.xml" />
     </section>
     <section id="preprocessing_tools" name="Preprocessing tools"></section>
+    <section id="consensus_sequence_build" name="Consensus sequence build">
+        <tool file="stats/filtering.xml"/>
+        <tool file="${model_tools_path}/flatten_collection.xml" />
+        <tool file="filters/cutWrapper.xml" />
+    </section>
     <section id="submission_tools" name="Submission tools"></section>
 </toolbox>
