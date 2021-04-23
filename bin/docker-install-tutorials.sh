@@ -57,7 +57,7 @@ echo " - Extracting tools from workflows"
 for w in `ls /workflowDir/*.ga | sort -r`
 do
     echo "------ $w ------"
-    workflow-to-tools -w $w -o /workflowDir/wftools.yaml -l "Consensus sequence build"
+    workflow-to-tools -w $w -o /workflowDir/wftools.yaml -l "Assembly tools"
     echo " - Installing tools from workflow" 
     n=0
     until [ $n -ge 3 ]
@@ -100,5 +100,3 @@ then
     rm $install_log
     service postgresql stop
 fi
-
-
