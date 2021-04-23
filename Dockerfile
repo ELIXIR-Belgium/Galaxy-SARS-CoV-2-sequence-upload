@@ -10,7 +10,7 @@
 FROM quay.io/bgruening/galaxy:20.05
 MAINTAINER ELIXIR Belgium
 
-ENV GALAXY_CONFIG_BRAND "ENA-upload"
+ENV GALAXY_CONFIG_BRAND "SARS-CoV-2 sequence upload"
 ENV ENABLE_TTS_INSTALL=True
 
 ADD bin/docker-install-tutorials.sh /setup-workflow.sh
