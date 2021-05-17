@@ -15,8 +15,8 @@
             "name": "Input dataset collection",
             "outputs": [],
             "position": {
-                "left": 200,
-                "top": 302.96665954589844
+                "left": 167.5,
+                "top": 336.76666259765625
             },
             "tool_id": null,
             "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
@@ -27,7 +27,7 @@
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "3636f330-3b02-4722-aa16-65b720b3c56c"
+                    "uuid": "d496cbb6-d0f4-44cf-9a2b-a844b776aa0a"
                 }
             ]
         },
@@ -47,8 +47,8 @@
             "name": "Input dataset",
             "outputs": [],
             "position": {
-                "left": 305.9666748046875,
-                "top": 714.88330078125
+                "left": 102.44999694824219,
+                "top": 526.3333129882812
             },
             "tool_id": null,
             "tool_state": "{\"optional\": false}",
@@ -59,7 +59,7 @@
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "2953843e-a1e3-4d95-a329-2793ecbb42f7"
+                    "uuid": "a3fd8250-44c1-4a21-a198-65bea31971e5"
                 }
             ]
         },
@@ -92,8 +92,8 @@
                 }
             ],
             "position": {
-                "left": 435.3833312988281,
-                "top": 113
+                "left": 229.36666870117188,
+                "top": 345.08331298828125
             },
             "post_job_actions": {
                 "HideDatasetActionout1": {
@@ -161,8 +161,8 @@
                 }
             ],
             "position": {
-                "left": 676.0499877929688,
-                "top": 324.8833312988281
+                "left": 329.683349609375,
+                "top": 378.23333740234375
             },
             "post_job_actions": {
                 "HideDatasetActionmapping_stats": {
@@ -190,7 +190,7 @@
                 "owner": "devteam",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"analysis_type\": {\"analysis_type_selector\": \"simple\", \"__current_case__\": 0, \"presets\": \"--very-sensitive\"}, \"library\": {\"type\": \"single\", \"__current_case__\": 0, \"input_1\": {\"__class__\": \"ConnectedValue\"}, \"unaligned_file\": \"false\", \"aligned_file\": \"false\"}, \"reference_genome\": {\"source\": \"history\", \"__current_case__\": 1, \"own_file\": {\"__class__\": \"ConnectedValue\"}}, \"rg\": {\"rg_selector\": \"set_id_auto\", \"__current_case__\": 2}, \"sam_options\": {\"sam_options_selector\": \"no\", \"__current_case__\": 1}, \"save_mapping_stats\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"analysis_type\": {\"analysis_type_selector\": \"simple\", \"__current_case__\": 0, \"presets\": \"--very-sensitive\"}, \"library\": {\"type\": \"single\", \"__current_case__\": 0, \"input_1\": {\"__class__\": \"ConnectedValue\"}, \"unaligned_file\": \"false\", \"aligned_file\": \"false\"}, \"reference_genome\": {\"source\": \"history\", \"__current_case__\": 1, \"own_file\": {\"__class__\": \"ConnectedValue\"}}, \"rg\": {\"rg_selector\": \"do_not_set\", \"__current_case__\": 3}, \"sam_options\": {\"sam_options_selector\": \"no\", \"__current_case__\": 1}, \"save_mapping_stats\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "2.3.4.3+galaxy0",
             "type": "tool",
             "uuid": "0befca33-9ded-492c-bc4f-56757a8d506d",
@@ -221,8 +221,8 @@
                 }
             ],
             "position": {
-                "left": 951.3499755859375,
-                "top": 476.1333312988281
+                "left": 571.066650390625,
+                "top": 399.98333740234375
             },
             "post_job_actions": {
                 "HideDatasetActionmetrics_file": {
@@ -286,8 +286,8 @@
                 }
             ],
             "position": {
-                "left": 1030.7666625976562,
-                "top": 132.73333740234375
+                "left": 567.0999755859375,
+                "top": 107.78334045410156
             },
             "post_job_actions": {
                 "HideDatasetActionhtml_report": {
@@ -351,8 +351,8 @@
                 }
             ],
             "position": {
-                "left": 1177.9833984375,
-                "top": 652.4666748046875
+                "left": 761.5499877929688,
+                "top": 250.23333740234375
             },
             "post_job_actions": {
                 "HideDatasetActionrealigned": {
@@ -399,8 +399,8 @@
                 }
             ],
             "position": {
-                "left": 1416.3499755859375,
-                "top": 750.0999755859375
+                "left": 651.3499755859375,
+                "top": 573.63330078125
             },
             "post_job_actions": {
                 "RenameDatasetActionoutput": {
@@ -432,9 +432,63 @@
         },
         "8": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_call/lofreq_call/2.1.5+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.2.2d+galaxy3",
             "errors": null,
             "id": 8,
+            "input_connections": {
+                "input1": {
+                    "id": 6,
+                    "output_name": "realigned"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "QualiMap BamQC",
+            "outputs": [
+                {
+                    "name": "raw_data",
+                    "type": "input"
+                },
+                {
+                    "name": "output_html",
+                    "type": "html"
+                }
+            ],
+            "position": {
+                "left": 1065.566650390625,
+                "top": 199.98333740234375
+            },
+            "post_job_actions": {
+                "HideDatasetActionraw_data": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "raw_data"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.2.2d+galaxy3",
+            "tool_shed_repository": {
+                "changeset_revision": "19ece8afbaab",
+                "name": "qualimap_bamqc",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"duplicate_skipping\": \"0\", \"input1\": {\"__class__\": \"ConnectedValue\"}, \"per_base_coverage\": \"false\", \"plot_specific\": {\"n_bins\": \"400\", \"paint_chromosome_limits\": \"true\", \"genome_gc_distr\": null, \"homopolymer_size\": \"3\"}, \"stats_regions\": {\"region_select\": \"all\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "2.2.2d+galaxy3",
+            "type": "tool",
+            "uuid": "ff36d10e-38b1-4f4c-bede-0e9f11998fdd",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_html",
+                    "uuid": "4fe22997-48da-4f39-a73e-28b451ddd928"
+                }
+            ]
+        },
+        "9": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_call/lofreq_call/2.1.5+galaxy0",
+            "errors": null,
+            "id": 9,
             "input_connections": {
                 "reads": {
                     "id": 7,
@@ -455,8 +509,8 @@
                 }
             ],
             "position": {
-                "left": 1649.7666015625,
-                "top": 847.7333374023438
+                "left": 834.4500122070312,
+                "top": 474.54998779296875
             },
             "post_job_actions": {
                 "HideDatasetActionvariants": {
@@ -478,14 +532,14 @@
             "uuid": "920968ff-d3c2-450d-af0a-7303425db322",
             "workflow_outputs": []
         },
-        "9": {
+        "10": {
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_filter/lofreq_filter/2.1.5+galaxy0",
             "errors": null,
-            "id": 9,
+            "id": 10,
             "input_connections": {
                 "invcf": {
-                    "id": 8,
+                    "id": 9,
                     "output_name": "variants"
                 }
             },
@@ -499,8 +553,8 @@
                 }
             ],
             "position": {
-                "left": 1698.36669921875,
-                "top": 726.4166870117188
+                "left": 1008.4166259765625,
+                "top": 488.3999938964844
             },
             "post_job_actions": {
                 "HideDatasetActionoutvcf": {
@@ -522,14 +576,14 @@
             "uuid": "fed7761a-c314-47cb-927a-3bfb462e8bc9",
             "workflow_outputs": []
         },
-        "10": {
+        "11": {
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff_sars_cov_2/snpeff_sars_cov_2/4.5covid19",
             "errors": null,
-            "id": 10,
+            "id": 11,
             "input_connections": {
                 "input": {
-                    "id": 9,
+                    "id": 10,
                     "output_name": "outvcf"
                 }
             },
@@ -556,8 +610,8 @@
                 }
             ],
             "position": {
-                "left": 1743.2666015625,
-                "top": 399.5
+                "left": 1195.61669921875,
+                "top": 491.79998779296875
             },
             "post_job_actions": {
                 "HideDatasetActionstatsFile": {
@@ -594,6 +648,6 @@
         }
     },
     "tags": [],
-    "uuid": "cbdbf2c8-b792-4dc0-b63a-e5c20a98345b",
-    "version": 3
+    "uuid": "c076577c-5c82-4665-9790-b86cd5a4b238",
+    "version": 8
 }

@@ -20,8 +20,8 @@
             "name": "Input dataset collection",
             "outputs": [],
             "position": {
-                "left": 262.03334045410156,
-                "top": 471.23333740234375
+                "left": 131.01666259765625,
+                "top": 235.63333129882812
             },
             "tool_id": null,
             "tool_state": "{\"optional\": false, \"collection_type\": \"list:paired\"}",
@@ -32,7 +32,7 @@
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "155a33c9-5ef8-4cad-a310-3090a5201c50"
+                    "uuid": "39f5e228-ec20-47a7-8b08-d0b3184ea6ef"
                 }
             ]
         },
@@ -52,8 +52,8 @@
             "name": "Input dataset",
             "outputs": [],
             "position": {
-                "left": 439.76666259765625,
-                "top": 785.7000122070312
+                "left": 219.89999389648438,
+                "top": 392.8666687011719
             },
             "tool_id": null,
             "tool_state": "{\"optional\": false}",
@@ -64,7 +64,7 @@
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "853cffa1-59ad-4a1f-b851-5bc05f921bde"
+                    "uuid": "7c551f4b-cff7-47df-b64c-2b05b47756d9"
                 }
             ]
         },
@@ -97,8 +97,8 @@
                 }
             ],
             "position": {
-                "left": 528.5,
-                "top": 297.48333740234375
+                "left": 264.25,
+                "top": 148.75
             },
             "post_job_actions": {
                 "HideDatasetActionoutput_paired_coll": {
@@ -155,8 +155,8 @@
                 }
             ],
             "position": {
-                "left": 758.0333251953125,
-                "top": 491.20001220703125
+                "left": 379.0333251953125,
+                "top": 245.61666870117188
             },
             "post_job_actions": {
                 "HideDatasetActionbam_output": {
@@ -199,8 +199,8 @@
                 }
             ],
             "position": {
-                "left": 944.816650390625,
-                "top": 396.8999938964844
+                "left": 472.41668701171875,
+                "top": 198.45001220703125
             },
             "post_job_actions": {
                 "HideDatasetActionoutputsam": {
@@ -254,8 +254,8 @@
                 }
             ],
             "position": {
-                "left": 1060.7666625976562,
-                "top": 528.9500122070312
+                "left": 530.38330078125,
+                "top": 264.5
             },
             "post_job_actions": {
                 "HideDatasetActionmetrics_file": {
@@ -303,8 +303,8 @@
                 }
             ],
             "position": {
-                "left": 1201.816650390625,
-                "top": 338.5
+                "left": 600.9166870117188,
+                "top": 169.25
             },
             "post_job_actions": {
                 "HideDatasetActionoutput": {
@@ -351,8 +351,8 @@
                 }
             ],
             "position": {
-                "left": 1246.699951171875,
-                "top": 676.433349609375
+                "left": 623.36669921875,
+                "top": 338.23333740234375
             },
             "post_job_actions": {
                 "HideDatasetActionrealigned": {
@@ -411,8 +411,8 @@
                 }
             ],
             "position": {
-                "left": 1473.1666259765625,
-                "top": 242.8000030517578
+                "left": 736.5999755859375,
+                "top": 121.41667175292969
             },
             "post_job_actions": {
                 "HideDatasetActionhtml_report": {
@@ -476,8 +476,8 @@
                 }
             ],
             "position": {
-                "left": 1332.9666748046875,
-                "top": 816.2166748046875
+                "left": 666.5,
+                "top": 408.1166687011719
             },
             "post_job_actions": {
                 "RenameDatasetActionoutput": {
@@ -509,9 +509,68 @@
         },
         "10": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_call/lofreq_call/2.1.5+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.2.2d+galaxy3",
             "errors": null,
             "id": 10,
+            "input_connections": {
+                "input1": {
+                    "id": 7,
+                    "output_name": "realigned"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool QualiMap BamQC",
+                    "name": "input1"
+                }
+            ],
+            "label": null,
+            "name": "QualiMap BamQC",
+            "outputs": [
+                {
+                    "name": "raw_data",
+                    "type": "input"
+                },
+                {
+                    "name": "output_html",
+                    "type": "html"
+                }
+            ],
+            "position": {
+                "left": 745,
+                "top": 573
+            },
+            "post_job_actions": {
+                "HideDatasetActionraw_data": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "raw_data"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/qualimap_bamqc/qualimap_bamqc/2.2.2d+galaxy3",
+            "tool_shed_repository": {
+                "changeset_revision": "19ece8afbaab",
+                "name": "qualimap_bamqc",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"duplicate_skipping\": \"0\", \"input1\": {\"__class__\": \"RuntimeValue\"}, \"per_base_coverage\": \"false\", \"plot_specific\": {\"n_bins\": \"400\", \"paint_chromosome_limits\": \"true\", \"genome_gc_distr\": null, \"homopolymer_size\": \"3\"}, \"stats_regions\": {\"region_select\": \"all\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "2.2.2d+galaxy3",
+            "type": "tool",
+            "uuid": "1e9fbc93-9d35-4cd7-aa1a-8d2be5a28cff",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_html",
+                    "uuid": "992e59a7-9a21-4eab-afe8-0fff2f753815"
+                }
+            ]
+        },
+        "11": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_call/lofreq_call/2.1.5+galaxy0",
+            "errors": null,
+            "id": 11,
             "input_connections": {
                 "reads": {
                     "id": 9,
@@ -532,8 +591,8 @@
                 }
             ],
             "position": {
-                "left": 1525.4166259765625,
-                "top": 906.816650390625
+                "left": 762.699951171875,
+                "top": 453.41668701171875
             },
             "post_job_actions": {
                 "HideDatasetActionvariants": {
@@ -555,14 +614,14 @@
             "uuid": "19ff4893-8ec2-4952-824a-24bec3cadc63",
             "workflow_outputs": []
         },
-        "11": {
+        "12": {
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_filter/lofreq_filter/2.1.5+galaxy0",
             "errors": null,
-            "id": 11,
+            "id": 12,
             "input_connections": {
                 "invcf": {
-                    "id": 10,
+                    "id": 11,
                     "output_name": "variants"
                 }
             },
@@ -576,8 +635,8 @@
                 }
             ],
             "position": {
-                "left": 1624.0999755859375,
-                "top": 801.1666870117188
+                "left": 812.050048828125,
+                "top": 400.6000061035156
             },
             "post_job_actions": {
                 "HideDatasetActionoutvcf": {
@@ -599,14 +658,14 @@
             "uuid": "41d51a67-78f6-4c4d-9808-c2309d637e0e",
             "workflow_outputs": []
         },
-        "12": {
+        "13": {
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff_sars_cov_2/snpeff_sars_cov_2/4.5covid19",
             "errors": null,
-            "id": 12,
+            "id": 13,
             "input_connections": {
                 "input": {
-                    "id": 11,
+                    "id": 12,
                     "output_name": "outvcf"
                 }
             },
@@ -633,8 +692,8 @@
                 }
             ],
             "position": {
-                "left": 1676.2333984375,
-                "top": 548.316650390625
+                "left": 838.11669921875,
+                "top": 274.16668701171875
             },
             "post_job_actions": {
                 "HideDatasetActionstatsFile": {
@@ -671,6 +730,6 @@
         }
     },
     "tags": [],
-    "uuid": "7fb32c61-c652-4749-8b44-768f234e63ef",
-    "version": 2
+    "uuid": "e39cda0e-a843-4489-9be1-6135afaa27f6",
+    "version": 3
 }
