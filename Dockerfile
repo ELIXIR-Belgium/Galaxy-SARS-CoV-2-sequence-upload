@@ -13,7 +13,9 @@ MAINTAINER ELIXIR Belgium
 ENV GALAXY_CONFIG_BRAND "SARS-CoV-2 sequence upload"
 ENV ENABLE_TTS_INSTALL=True
 
-ADD bin/docker-install-tutorials.sh /setup-workflow.sh
+ADD bin/docker-install-tools.sh /setup-workflow.sh
+ADD /data/data-library.yaml /dataDir/data-library.yaml
+ADD bin/data_library_download.sh /data_library_download.sh
 ADD /tools.yaml /tools.yaml 
 ADD /workflow /workflowDir
 ADD /bin/tool_conf.xml /galaxy-central/config/tool_conf.xml
@@ -23,5 +25,7 @@ ADD /bin/galaxy.yml /etc/galaxy/galaxy.yml
 ADD /bin/user_preferences_extra_conf.yml /etc/galaxy/user_preferences_extra_conf.yml
 
 
-RUN chmod 755 /setup-workflow.sh && \
+RUN chmod 755 /setup-workflow.sh /data_library_download.sh && \
     /setup-workflow.sh
+
+ENTRYPOINT ["/data_library_download.sh"]

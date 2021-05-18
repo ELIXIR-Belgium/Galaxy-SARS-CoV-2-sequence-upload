@@ -1,0 +1,22 @@
+---
+destination:
+  type: library
+  name: Covid-19 Reference Data
+  description: SARS-CoV-2 reference genome, ARCTIC primer list (*.bed), primer-to-amplicon assignment and feature mapping
+items:
+- url: https://raw.githubusercontent.com/ELIXIR-Belgium/Galaxy-SARS-CoV-2-sequence-upload/main/data/Galaxy1-NC_045512.2_reference_sequence.fasta
+  src: url
+  ext: fasta
+  info: NC_045512.2 reference sequence
+- url: https://raw.githubusercontent.com/ELIXIR-Belgium/Galaxy-SARS-CoV-2-sequence-upload/main/data/Galaxy2-ARTIC_nCoV-2019_v3.bed6
+  src: url
+  ext: bed6
+  info: ARTIC nCoV-2019 v3
+- url: https://raw.githubusercontent.com/ELIXIR-Belgium/Galaxy-SARS-CoV-2-sequence-upload/main/data/Galaxy4-ARTIC_amplicon_info_v3.tabular
+  src: url
+  ext: tabular
+  info: ARTIC amplicon info v3
+- url: https://raw.githubusercontent.com/ELIXIR-Belgium/Galaxy-SARS-CoV-2-sequence-upload/main/data/Galaxy5-NC_045512.2_feature_mapping.tabular
+  src: url
+  ext: tabular
+  info: NC_045512.2 feature mapping

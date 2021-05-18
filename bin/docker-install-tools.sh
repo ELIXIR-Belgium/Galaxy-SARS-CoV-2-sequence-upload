@@ -32,9 +32,9 @@ else
         unset SUDO_GID; \
         unset SUDO_COMMAND; \
         unset SUDO_USER; \
-        ./run.sh -d $install_log --pidfile galaxy_install.pid --http-timeout 3000"
+        ./run.sh -d $install_log --pidfile /galaxy-central/galaxy_install.pid --http-timeout 3000"
 
-    galaxy_install_pid=`cat galaxy_install.pid`
+    galaxy_install_pid=`cat /galaxy-central/galaxy_install.pid`
     galaxy-wait -g http://localhost:$PORT -v --timeout 120
 fi
 
@@ -62,13 +62,13 @@ do
     n=0
     until [ $n -ge 3 ]
     do
-        shed-tools install -t /workflowDir/wftools.yaml -g "http://localhost:$PORT" -a fakekey && break
+        shed-tools install -t /workflowDir/wftools.yaml -g "http://localhost:$PORT" -a $GALAXY_DEFAULT_ADMIN_KEY && break
         n=$[$n+1]
         sleep 5
         echo " - Retrying shed-tools install"
     done    
     echo " - Installing workflow"
-    workflow-install --publish_workflows --workflow_path $w -g "http://localhost:$PORT" -a fakekey
+    workflow-install --publish_workflows --workflow_path $w -g "http://localhost:$PORT" -a $GALAXY_DEFAULT_ADMIN_KEY
     echo "Installed workflow $w"
 done
 
@@ -76,11 +76,11 @@ echo "Installing extra tools"
 n=0
 until [ $n -ge 3 ]
 do
-    shed-tools install -t /tools.yaml -g "http://localhost:$PORT" -a fakekey && break
+    shed-tools install -t /tools.yaml -g "http://localhost:$PORT" -a $GALAXY_DEFAULT_ADMIN_KEY && break
     n=$[$n+1]
     sleep 5
     echo " - Retrying shed-tools install"
-done        
+done      
 
 
 exit_code=$?
