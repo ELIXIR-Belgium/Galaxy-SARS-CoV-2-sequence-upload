@@ -5,7 +5,7 @@
     </section>
     <section id="preprocessing_tools" name="Preprocessing tools"></section>
     <section id="submission_tools" name="Submission tools"></section>
-    <section id="workflow_tools" name="Workflow tools">
+    <section id="tools_from_workflows" name="Tools from workflows">
         <tool file="stats/filtering.xml"/>
         <tool file="${model_tools_path}/flatten_collection.xml" />
         <tool file="filters/cutWrapper.xml" />

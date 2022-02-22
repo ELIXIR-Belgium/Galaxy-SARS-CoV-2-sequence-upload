@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "Preprocessing of raw SARS-CoV-2 reads", 
     "format-version": "0.1", 
-    "name": "Read pre-processing without downloading from SRA", 
+    "name": "COVID-19: Read pre-processing without downloading from SRA", 
     "steps": {
         "0": {
             "annotation": "", 

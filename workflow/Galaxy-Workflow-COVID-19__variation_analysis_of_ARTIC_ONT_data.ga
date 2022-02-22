@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true",
     "annotation": "",
     "format-version": "0.1",
-    "name": "COVID-19: variation analysis on ARTIC ONT data",
+    "name": "COVID-19: Variation analysis on ARTIC ONT data",
     "steps": {
         "0": {
             "annotation": "",

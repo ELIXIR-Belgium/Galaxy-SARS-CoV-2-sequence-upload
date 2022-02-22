@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true",
     "annotation": "Build a consensus sequence from a list of variants. Hard-mask regions with low coverage and sites with called, but filtered variants.\nNote: Sites with called and retained variants are never masked.",
     "format-version": "0.1",
-    "name": "COVID-19: consensus construction",
+    "name": "COVID-19: Consensus construction",
     "steps": {
         "0": {
             "annotation": "",
