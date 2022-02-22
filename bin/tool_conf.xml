@@ -4,10 +4,10 @@
         <tool file="data_source/upload.xml" />
     </section>
     <section id="preprocessing_tools" name="Preprocessing tools"></section>
-    <section id="cassembly_tools" name="Assembly tools">
+    <section id="submission_tools" name="Submission tools"></section>
+    <section id="workflow_tools" name="Workflow tools">
         <tool file="stats/filtering.xml"/>
         <tool file="${model_tools_path}/flatten_collection.xml" />
         <tool file="filters/cutWrapper.xml" />
     </section>
-    <section id="submission_tools" name="Submission tools"></section>
 </toolbox>
