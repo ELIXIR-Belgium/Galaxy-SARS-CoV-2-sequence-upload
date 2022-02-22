@@ -6,7 +6,7 @@ tools:
 - name: ena_upload
   owner: iuc
   revisions:
-  - 382518f24d6d
+  - 4aab5ae907b6
   tool_panel_section_label: Submission tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
@@ -15,4 +15,11 @@ tools:
   revisions:
   - efb0924293c3
   tool_panel_section_label: Preprocessing tools
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+
+- name: ena_webin_cli
+  owner: ieguinoa
+  revisions:
+  - 7d751b5943b0
+  tool_panel_section_label: Submission tools
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
