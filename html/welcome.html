@@ -141,10 +141,10 @@
         <p>The tool offers three ways of entering metadata for submission:</p>
         <ul>
             <li>Complete the <a
-                    href="https://drive.google.com/file/d/1dulhBEfRO56ldCnuaIhjjtNbJDxQ5K1v/view?usp=sharing">metadata
+                    href="https://github.com/ELIXIR-Belgium/ENA-metadata-templates/blob/main/templates/ERC000033/example_metadata_template_ERC000033.xlsx">metadata
                     spreadsheet template</a> and upload it as in step 2 or;</li>
             <li>Interactively generate the metadata structure or;</li>
-            <li>Complete the 4 <a href="https://github.com/usegalaxy-eu/ena-upload-cli/tree/master/example_tables">tsv
+            <li>Complete the 4 <a href="https://github.com/ELIXIR-Belgium/ENA-metadata-templates/blob/main/templates/ERC000033/">tsv
                     templates</a> and upload as in step 2.</li>
         </ul>
 
@@ -158,7 +158,30 @@
             everything looks fine, publish the data by changing the “Release Date” of the study to a day later than the
             current day. It can take several days for ENA to index the data and to let it appear in a correct manner.
             Covid-19 data will also be indexed by the <a href="https://www.covid19dataportal.org/">COVID-19 Data
-                Portal</a></p>
+            Portal</a></p>
+
+        <h2 id="6-run-the-variation-analysis-workflow">6. Run the variation analysis workflow</h2>
+        <p>There are currently four workflows for variation analysis that cater for different libraries/platform combinations:</p>
+        <ul>
+            <li>Illumina whole genome sequencing (WGS) paired-end (PE) or single-end (SE)</li>
+            <li>Illumina amplicon (ARCTIC protocol) paired-end</li>
+            <li>Oxford Nanopore amplicon (ARCTIC protocol)</li>
+        </ul>
+        
+        <p>Go to the workflow section and select the variation analysis workflow suited for your data by clicking on <i class="fas fa-play fa-inverse" aria-hidden="true"></i>.
+        This brings up the workflow menu.</p>
+        
+        <h2 id="7-run-the-consensus-construction-workflow">7. Run the consensus construction workflow</h2>
+        <p>Go to the workflow section and select the Consensus Construction workflow. This workflow takes as input a Variant Call File (vcf) collection (Fig. 8a), an alignment file (bam) collection and SARS-CoV-2 reference genome.
+        Select the appropriate collections and files and <strong>Run Workflow</strong>.
+        This workflow outputs a consensus sequence collection as well as one multisample fasta with all the consensus sequences.</p>
+        
+        <h2 id="8-submit-consensus-sequence-to-ena">8. Submit consensus sequence to ENA</h2>
+        <p>Open the consensus sequence submission tool
+        This tool requires a fasta file (single submission) or a multi-fasta file (multiple submissions) as well as the associated metadata.</p>
+        
+        <p>Visit <a href="https://www.ebi.ac.uk/ena/submit/webin">Webin online</a> to check on your submissions or <a href="https://wwwdev.ebi.ac.uk/ena/submit/webin">dev Webin</a> to check on test submissions as explained in <a href="https://rdm.elixir-belgium.org/covid-19/sarscov2_submission.html#6-check-for-a-valid-submission">section 6</a></p>
+        
     </div>
 
     <div class="footer">
